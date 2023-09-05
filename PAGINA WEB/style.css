@@ -183,7 +183,10 @@ p {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    border: 3px solid #fff;
 }
+
+
 
 /* estilos contacto */
 
@@ -255,6 +258,14 @@ p {
 
 .container-form .btn-enviar:hover{
     background: #e39403;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1;
+    width: 80px;
 }
 
 /* responsibe */
