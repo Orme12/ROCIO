@@ -72,7 +72,7 @@ html {
 
 .header {
     height: 100vh !important;
-    background: url(img/completo-rosa.jpg) no-repeat center; /*para poner video de fondo  */
+    background: url(banner/Banner.jpg) no-repeat center; /*para poner video de fondo  */
     background-size: cover;
 }
 
@@ -91,12 +91,12 @@ html {
 
 
 /* estilos titulo */
-.title {
+.tittle {
     margin-top: 40px;
     font-size: 60px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #fff;
+    color: white;
 }
 
 p {
@@ -106,9 +106,30 @@ p {
     padding: 0 100px;
 }
 
+.subtitulo {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: black;
+    padding: 0 100px;
+}
+
+.subtitle {
+    margin-top: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
 /* estilos newin */
+
+.sub_n {
+    padding: 20px;
+    color: white;
+    
+}
 .content {
-    height: 70vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,17 +141,42 @@ p {
     background: #171717;
 }
 
+.gallery-containern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    padding: 50px;
+    grid-gap: 50px;
+    
+}
+
+.gallery__itemn {
+    position: relative;
+}
+
+.gallery__imgn {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #fff;
+}
+
+
 /* estilos quien soy */
+
+.wrapper {
+    margin: 150px auto;
+    width: 70%;
+    height: 70vh;
+    margin-top: 120px
+}
+
 .contenedor-quien {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 50vh;
-}
-
-.wrapper {
-    margin: 150px auto;
-    width: 70%;
 }
 
  .img-quien {
@@ -186,9 +232,7 @@ p {
     border: 3px solid #fff;
 }
 
-.gallery__img p {
-    
-}
+
 
 .mivideo {
     position: sticky;
@@ -200,6 +244,10 @@ p {
 
 
 /* estilos contacto */
+
+.info-form {
+    list-style: ;
+}
 
 .container-form {
     width: 100%;
@@ -281,23 +329,35 @@ p {
 
 /* responsibe */
 
-@media (max-width: 768px) {
-
-    .title {
-        margin-bottom: 0;
-        font-size: 40px;
+/* Media query para pantallas de 768x844 píxeles */
+@media screen and (max-width: 768px)  {
+    /* Estilos para el banner de inicio */
+    .header {
+        background-size: 100% auto; /* El banner de inicio sigue ocupando el 100% de su bloque */
     }
 
-    .sau {
-        height: 120vh;
+    /* Estilos para 'Quien Soy' y 'Trabajos' */
+    .wrapper {
+        flex-direction: column; /* Cambia la dirección de los elementos a columnas */
     }
 
-    .navbar {
-        display: none;
+    /* Estilos para el texto en 'Quien Soy' */
+    .txt {
+        order: 2; /* Mueve el texto de 'Quien Soy' debajo de la imagen */
     }
 
-    
-    
+    /* Estilos para la imagen en 'Quien Soy' */
+    .img-quien {
+        order: 1; /* Mueve la imagen de 'Quien Soy' arriba del texto */
+        max-width: 100%; /* Asegura que la imagen ocupe el 100% del ancho */
+    }
+
+    /* Estilos para la galería de imágenes en 'Trabajos' */
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); /* Muestra las fotos en filas de 3 imágenes */
+    }
 }
+
+
 
 
